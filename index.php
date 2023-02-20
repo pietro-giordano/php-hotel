@@ -57,13 +57,14 @@ $hotels = [
             <div class="row mt-3">
 
                   <?php foreach ($hotels as $hotel) {
+                        echo '<div class="col-6">';
                         echo '<table class="table table-info">';
 
                         foreach ($hotel as $key => $hotelData) {
                               echo '<tr>';
 
                               if ($key == 'name') {
-                                    echo '<th>' . $key . '</th>';
+                                    echo '<th class="col-6">' . $key . '</th>';
                                     echo '<th>' . $hotelData . '</th>';
                               } else if ($key == 'parking') {
                                     echo '<td>' . $key . '</td>';
@@ -81,6 +82,7 @@ $hotels = [
                         }
 
                         echo '</table>';
+                        echo '</div>';
                   } ?>
 
             </div>
