@@ -58,17 +58,28 @@ $hotels = [
 
                   <?php foreach ($hotels as $hotel) {
                         echo '<table class="table table-info">';
+
                         foreach ($hotel as $key => $hotelData) {
                               echo '<tr>';
+
                               if ($key == 'name') {
                                     echo '<th>' . $key . '</th>';
                                     echo '<th>' . $hotelData . '</th>';
+                              } else if ($key == 'parking') {
+                                    echo '<td>' . $key . '</td>';
+                                    if ($hotelData == 'true') {
+                                          echo '<td>' . 'true' . '</td>';
+                                    } else {
+                                          echo '<td>' . 'false' . '</td>';
+                                    }
                               } else {
                                     echo '<td>' . $key . '</td>';
                                     echo '<td>' . $hotelData . '</td>';
                               }
+
                               echo '</tr>';
                         }
+
                         echo '</table>';
                   } ?>
 
